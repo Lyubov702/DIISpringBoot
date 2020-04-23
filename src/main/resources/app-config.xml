@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+       xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+       xsi:schemaLocation="http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans.xsd">
+
+<bean id="v8" class="com.mycode.bean.V8" scope="prototype"  />
+<bean id="diesel" class="com.mycode.bean.Diesel" scope="prototype"/>
+
+ <!--   default-->
+
+<bean id="ladaKalina" class="com.mycode.bean.Car" scope="prototype" >
+    <property name="engine" ref="v8"/>
+    <property name="vin" value="XTA490394-394-3"/>
+</bean>
+
+<bean id="cayene" class="com.mycode.bean.Car" scope="singleton">
+    <property name="engine" ref="diesel"/>
+    <property name="vin" value="777777777777"/>
+</bean>
+
+</beans>

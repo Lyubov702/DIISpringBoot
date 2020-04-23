@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+       xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+       xsi:schemaLocation="http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans.xsd">
+
+    <bean id="carConstructor" class="com.mycode.bean.CarWithConstructor" scope="prototype" autowire="constructor" >
+        <constructor-arg index="1" value="XTA490394-394-3"/>
+    </bean>
+
+    <bean id="v8constructor" class="com.mycode.bean.V8" scope="prototype"/>
+
+</beans>
